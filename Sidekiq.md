@@ -52,5 +52,6 @@ UserNotificationJob.set(wait: 5.minutes).perform_later(user)
 ------
 [更多...](https://github.com/mperham/sidekiq/wiki)
 
-作者 @GLucien 
+作者 [@GLucien](https://github.com/GLucien)
+
 2017 年 09月 21日
