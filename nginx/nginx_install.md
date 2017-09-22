@@ -56,3 +56,8 @@ cd  /usr/local/nginx/sbin
 ![Nginx_install_success](nginx/nginx_install_success.jpg)
 
 **至此Nginx的安装完成!**
+
+------
+作者 [@GLucien](https://github.com/GLucien)
+
+2017 年 09月 21日
