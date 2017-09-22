@@ -16,9 +16,9 @@ rails_root = File.expand_path(__FILE__).split('/')[0..-3].join('/')
 worker_processes 4
 working_directory rails_root
 
-listen 3000, :tcp_nopush => true
+listen 3000, :tcp_nopush => false
 #如果Http服务器和App服务器部署在一个服务器上建议采用下面这个配置listen
-#listen "/var/tmp/.unicorn.sock"
+listen "/var/tmp/.unicorn.sock"
 
 timeout 180
 
@@ -46,7 +46,7 @@ end
 
 ```ruby
 unicorn_rails -c config/unicorn.rb #前台启动
-unicorn_rails -c config/unicorn.rb -d #后台进程启动
+unicorn_rails -c config/unicorn.rb -D #后台进程启动
 ```
 #### 4. 启动完成之后浏览器访问
 ```ruby
