@@ -53,7 +53,7 @@ cd  /usr/local/nginx/sbin
 
 出现如下图的提示表示安装成功
 
-![Nginx_install_success](nginx/nginx_install_success.jpg)
+![Nginx_install_success](nginx_install_success.jpg)
 
 **至此Nginx的安装完成!**
 
