@@ -17,6 +17,8 @@ worker_processes 4
 working_directory rails_root
 
 listen 3000, :tcp_nopush => true
+#如果Http服务器和App服务器部署在一个服务器上建议采用下面这个配置listen
+#listen "/var/tmp/.unicorn.sock"
 
 timeout 180
 
