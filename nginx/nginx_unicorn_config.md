@@ -28,7 +28,7 @@ events {
     # server {
     #   listen 80;
     #   location / {
-    #       proxy_pass http://192.168.0.112:8080; #应用服务器HTTP地址
+    #       proxy_pass http://localhost:3000; #应用服务器HTTP地址
     #   }
     # }
 }
@@ -83,7 +83,7 @@ http {
         root /home/lucien/study/circles/public;
  
         #设定本虚拟主机的访问日志
-        access_log  /home/lucien/study/circles/logs/nginx_access.log;
+        access_log  /home/lucien/study/circles/log/nginx_access.log;
         error_log   /home/lucien/study/circles/log/nginx_error.log; 
         rewrite_log     on;  
  
@@ -102,7 +102,7 @@ http {
         
         #配置错误页面
         location =/500.html {
-            root /home/NginxUser/www/guorj/public;
+            root /home/lucien/study/circles/public;
         }
         
         #禁止访问 .htxxx 文件
