@@ -2,7 +2,7 @@
 
 ```config
 #运行用户,如果不设置会默认显示为nobody
-user nobody;
+#user nobody;
 #启动进程,通常设置成和cpu的数量相等,可通过 cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c 查看cpu信息
 worker_processes  4;
  
@@ -28,7 +28,7 @@ events {
     # server {
     #   listen 80;
     #   location / {
-    #       proxy_pass http://localhost:3000; #应用服务器HTTP地址
+    #       proxy_pass http://192.168.0.112:8080; #应用服务器HTTP地址
     #   }
     # }
 }
@@ -74,17 +74,19 @@ http {
     }
     #设定虚拟主机配置
     server {
+        set $app_root /home/lucien/study/b2c/shopping;
         #侦听80端口
         listen  80;
         #定义使用localhost访问
         server_name localhost;
  
         #定义服务器的默认网站根目录位置
-        root /home/lucien/study/circles/public;
+	       root $app_root/public;
  
         #设定本虚拟主机的访问日志
-        access_log  /home/lucien/study/circles/log/nginx_access.log;
-        error_log   /home/lucien/study/circles/log/nginx_error.log; 
+	       access_log  logs/nginx_access.log;
+        error_log   logs/nginx_error.log; 
+
         rewrite_log     on;  
  
         try_files $uri/index.html $uri.html $uri @app_server; 
@@ -97,12 +99,12 @@ http {
           
           proxy_buffering  on;
           proxy_redirect   off;
-          proxy_pass localhost:3000;
+          proxy_pass http://localhost:3000;
         }
         
         #配置错误页面
         location =/500.html {
-            root /home/lucien/study/circles/public;
+             root $app_root/public;
         }
         
         #禁止访问 .htxxx 文件
