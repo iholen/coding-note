@@ -47,7 +47,7 @@ make && make install
 
 ### 检测是否安装成功
 ```shell
-cd  /usr/local/nginx/sbin
+cd /usr/local/nginx/sbin
 ./nginx -t
 ```
 
@@ -75,6 +75,6 @@ cd  /usr/local/nginx/sbin
 ```
 
 ------
-作者 [@GLucien](https://github.com/GLucien)
+作者 [@holen](https://github.com/holen)
 
 2017 年 09月 21日
