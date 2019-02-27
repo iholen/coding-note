@@ -75,6 +75,6 @@ cd /usr/local/nginx/sbin
 ```
 
 ------
-作者 [@holen](https://github.com/holen)
+作者 [@iholen](https://github.com/iholen)
 
 2017 年 09月 21日

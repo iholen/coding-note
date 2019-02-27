@@ -135,6 +135,6 @@ end
 避免定义的方法名是配置文件中的key, 这样可以避免程序里面其他地方调用了一次[]之后，影响其他地方调用my_key方法的值，引发错误，定义其他名称的类方法即可
 
 ----------
-作者 [@holen](https://github.com/holen)
+作者 [@iholen](https://github.com/iholen)
 
 2018 年 08月 31日
