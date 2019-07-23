@@ -2,7 +2,7 @@
 
 ### 可变性
 `String`类中使用`final`关键字字符数组保存字符串, `String`对象是不可变的
-`StringBuffer`和`StringBuffer`都继承自`AbstractStringBuilder`类, `AbstractStringBuilder`类也是使用字符数组保存字符串,但是没有使用`final`关键字,所以都是可变的
+`StringBuffer`和`StringBuilder`都继承自`AbstractStringBuilder`类, `AbstractStringBuilder`类也是使用字符数组保存字符串,但是没有使用`final`关键字,所以都是可变的
 
 ### 线程安全性
 `String`中的对象是不可变的，可以理解为常量，线程安全。

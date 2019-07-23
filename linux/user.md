@@ -18,6 +18,11 @@ deploy    ALL=(ALL)       ALL （添加这一行）
 chmod -v u-w /etc/sudoers
 ```
 
+### 删除用户
+```
+userdel test
+```
+
 ### grep命令
 * grep -C 5 keyword file_path  显示file文件中匹配foo字串那行以及上下5行
 * grep -B 5 keyword file_path  显示foo及前5行
